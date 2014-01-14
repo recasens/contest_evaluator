@@ -1,5 +1,5 @@
 %%%Load all the test_sets and put it in a vector
-savepath(genpath('/home/ubuntu/contest_evaluator'))
+addpath(genpath('/Users/a/Documents/MIT/CSAIL/matlab/contest_v0'))
 initial_scale=0.5
 cls='TrainContest';
 server = 'http://detectme.csail.mit.edu/'
