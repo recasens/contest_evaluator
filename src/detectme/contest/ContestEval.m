@@ -63,5 +63,3 @@ while(1)
     pause(60*10);
 end
 
-
-
