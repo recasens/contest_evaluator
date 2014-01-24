@@ -31,7 +31,7 @@ if nargin < 3
     thr = model.thresh;
 end
 
-minoverlap = 0.5; 
+minoverlap = 0.4; 
 cls = model.class;
 
 if nargin < 4 % compute boxes

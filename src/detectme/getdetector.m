@@ -2,8 +2,8 @@ function [detector,images] = getdetector(id)
 
 % Get detector and associated annotated images from server
 
-    server = 'http://detectme.csail.mit.edu/'
-
+    server = 'http://detectme.csail.mit.edu/';
+    %server = 'http://128.52.128.116/';
     % Get detector data
     detectorURL = strcat(server,'detectors/api/',num2str(id),'/?format=json');
     detectorJSON = urlread2(detectorURL);
