@@ -22,7 +22,7 @@ else
     i = I(last);
     pick = [pick; i];
     suppress = [last];
-    for pos = 1:last-1
+    parfor pos = 1:last-1
       j = I(pos);
       xx1 = max(x1(i), x1(j));
       yy1 = max(y1(i), y1(j));
@@ -32,9 +32,8 @@ else
       hj =y2(j)-y1(j)+1;
       w = xx2-xx1+1;
       h = yy2-yy1+1;
-      if wj*hj<5e4
-          suppress = [suppress; pos];
-      elseif w > 0 && h > 0
+      
+      if w > 0 && h > 0
         % compute overlap 
         o = w * h / area(j);
         if o > overlap

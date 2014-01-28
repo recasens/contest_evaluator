@@ -22,7 +22,7 @@ if nargin < 9
 end
 
 % we assume color images
-input = color(input);
+%input = color(input);
 
 % prepare model for convolutions
 rootfilters = [];
@@ -43,7 +43,10 @@ pady = ceil(model.maxsize(1)/2+1);
 
 % the feature pyramid
 interval = model.interval;
-[feat, scales] = featpyramid(input, model.sbin, interval);
+
+
+feat = input.features;
+scales = input.scales;
 
 % detect at each scale
 best = -inf;
